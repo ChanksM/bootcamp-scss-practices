@@ -4,6 +4,18 @@ $box-border-color: #E2E6E7;
 $color-1: #FFC12D;
 $color-2: #F9B718;
 $color-3: #A47503;
+$color-4: #97E411;
+$color-5: #7BC200;
+$color-6: #558502;
+$color-7: #FD7761;
+$color-8: #F55C43;
+$color-9: #D52E13;
+$color-10: #6FD9FC;
+$color-11: #47B4F6;
+$color-12: #0787D4;
+$color-13: #A39CDC;
+$color-14: #8781BD;
+$color-15: #5B568E;
 
 * {
     margin: 0;
@@ -12,9 +24,9 @@ $color-3: #A47503;
     text-decoration: none;
 }
 
-body {
+main {
     width: 1170px;
-    height: 632px;
+    height: 510px;
     margin: auto;
     display: flex;
     justify-content: space-between;
@@ -22,17 +34,13 @@ body {
 }
 
 .box {
-    margin-top: 50px;
-    width: 48%;
-    height: 23.7%;
-    display: flex;
-    justify-content: space-around;
+    padding: 42px 0 42px 49px;
     border: 1px solid $box-border-color;
     border-radius: 10px;
-    padding: 42px 0 0 49px;
+    display: flex;
     position: relative;
 
-    &::before{
+    &::before {
         content: "\f12a";
         font-family: "fontAwesome";
         font-size: 24px;
@@ -48,32 +56,71 @@ body {
         width: 50px;
         margin-right: 28px;
     }
+
     div {
         font-family: "Lato";
         font-size: 14px;
         padding-right: 59px;
 
         h3 {
-            line-height: 26px;
+            line-height: 8px;
             font-weight: 900;
             color: $header-text-color;
             letter-spacing: 0.04px;
+            margin-bottom: 16px
         }
         p {
             line-height: 24px;
             color: $paragraph-text-color;
-            width: 100%;
         }
     }
     a{
-        &::before{
+        position: absolute;
+        top: 16px;
+        right: 18px;
+
+        &::before {
             content: "\f00d";
             font-family: "fontAwesome";
-            position: absolute;
-            top: 16px;
-            right: 18px;
             font-size: 14px;
             color: #CFD2D3;
+        }
+    }
+
+    &.check {
+        &::before {
+            content: "\f00c";
+            background-color: $color-4;
+            border: 7px solid $color-5;
+            color: $color-6;
+        }
+    }
+
+    &.error {
+        &::before{
+            content: "\f00d";
+            background-color: $color-7;
+            border: 7px solid $color-8;
+            color: $color-9;
+        }
+    }
+
+    &.flash {
+        &::before {
+            content: "\f0e7";
+            background-color: $color-10;
+            border: 7px solid $color-11;
+            color: $color-12;
+        }
+    }
+
+    &.info {
+
+        &::before {
+            content: "\f129";
+            background-color: $color-13;
+            border: 7px solid $color-14;
+            color: $color-15;
         }
     }
 }
